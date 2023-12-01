@@ -73,9 +73,6 @@ class Kolikkosade:
         self.pisteet = 0  
         self.elamat = 5
                 
-        if self.pisteet % 3 == 0 and self.pisteet > 0:
-            self.elamat += 1
-            
             
     def pelaa(self):
         """Pelataan"""
@@ -161,7 +158,7 @@ class Kolikkosade:
                 self.pisteet += 1
                 self.kolikot.remove(kolikko)
                 
-                if self.pisteet % 50 == 0:
+                if self.pisteet % 3 == 0:
                     self.elamat += 1
 
             if kolikko[1] + self.kolikot_kuva.get_height() == self.korkeus: 
@@ -265,10 +262,10 @@ class Kolikkosade:
                 self.naytto.blit(UI, (random_x, random_y))                
             else:
                 self.missasit = False  # Aseta osuma Falseksi, kun aika on kulunut loppuun
-                self.missasit_aika = None  # Nollaa aika osuman päätyttyä                  
+                self.missasit_aika = None  # Nollaa aika osuman päätyttyä                
+                  
                 
         if self.peli_loppui():
-            #if self.pisteet <= self.ennatys:
             teksti1 = self.fontti.render("Nyyh, peli loppui!", True, (255, 0, 0))
             self.naytto.blit(teksti1, (self.naytto.get_width() / 2, self.naytto.get_height() / 2))                       
             if self.pisteet > self.ennatys:    
