@@ -1,6 +1,6 @@
 
 """
-    Rahasade
+    Kolikkosade
 
     Ruudun alareunassa on robotti, jota pelaaja voi liikuttaa vasemmalle tai oikealle
     Taivaalta sataa rahaa, jota robotin tulee kerätä.
