@@ -158,7 +158,7 @@ class Kolikkosade:
                 self.pisteet += 1
                 self.kolikot.remove(kolikko)
                 
-                if self.pisteet % 3 == 0:
+                if self.pisteet % 50 == 0:
                     self.elamat += 1
 
             if kolikko[1] + self.kolikot_kuva.get_height() == self.korkeus: 
